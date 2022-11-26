@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 12px Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    margin: auto;
+    height: 70px;
+    background-color: #afa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-name {
+    font-size: 40px;
+    margin: 0;
+    padding-top: 5px;
+    list-style: none;
+}
+
+.container {
+    margin-top: 10px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.drag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drag label {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 400px;
+    height: 200px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    font: 14px/50px Tahoma;
+    transition: all 0.18s ease-in-out;
+    border: 1px solid #333;
+    color: #333;
+    margin-left: 50px;
+}
+
+.inputs {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 90%;
+    height: 100%;
+    background-color: rgba(174, 169, 169, 0.512);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-radius: 5px;
+
+}
+
+.submit-button {
+    grid-area: 2 / 1 / 3 / 3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+
+.my {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+
+#image-event-id-label {
+    position: relative;
+}
+
+.drag label:hover {
+    color: white;
+    background: #333;
+}
+
+#image-event-id {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#image-event-id-label {
+    position: relative;
+}
+
+#image-event-id-label.dragged-over {
+    color: white;
+    background: #333;
+}
+
+.inputs button,
+.inputs input {
+    padding: 6px 8px 6px 16px;
+    /* width: 80%; */
+    width: 160px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+div.inputs div {
+    font-size: 20px;
+}
